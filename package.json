@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "react-dotenv && vite build",
-    "lint": "react-dotenv && eslint .",
-    "preview": "react-dotenv && vite preview"
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.7.9",
