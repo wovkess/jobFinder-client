@@ -45,7 +45,7 @@ const Form = () => {
             if (editingJob) {
                 await axios.put(`${API_URL}/${editingJob._id}`, formData);
                 setEditingJob(null);
-                navigate('/table')
+                navigate(`${API_URL}/table`)
             } else {
                 await axios.post(API_URL, formData);
             }

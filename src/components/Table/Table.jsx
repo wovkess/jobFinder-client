@@ -21,7 +21,7 @@ const Table = () => {
 
     const handleEdit = (job) => {
         setEditingJob(job);
-        navigate('/form')
+        navigate(`${API_URL}/form`)
     };
 
     return (
