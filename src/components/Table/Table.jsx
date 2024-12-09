@@ -4,7 +4,7 @@ import {useContext} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-const API_URL = import.meta.env.API_URL;
+const API_URL = 'https://jobfinder-server-kvct.onrender.com/jobs';
 
 const Table = () => {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Table = () => {
 
     const handleEdit = (job) => {
         setEditingJob(job);
-        navigate(`${API_URL}/form`)
+        navigate(`/form`)
     };
 
     return (

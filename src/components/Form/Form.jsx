@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 
 
-const API_URL = import.meta.env.API_URL;
+const API_URL = 'https://jobfinder-server-kvct.onrender.com/jobs';
 
 const Form = () => {
     const { fetchJobs, editingJob, setEditingJob } = useContext(JobsContext);
@@ -45,7 +45,7 @@ const Form = () => {
             if (editingJob) {
                 await axios.put(`${API_URL}/${editingJob._id}`, formData);
                 setEditingJob(null);
-                navigate(`${API_URL}/table`)
+                navigate(`/table`)
             } else {
                 await axios.post(API_URL, formData);
             }
@@ -59,6 +59,7 @@ const Form = () => {
                 status: '',
                 note: '',
             });
+            navigate(`/table`)
         } catch (error) {
             console.error('Error submitting form:', error);
         }
