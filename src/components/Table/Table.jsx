@@ -4,7 +4,7 @@ import {useContext} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-const API_URL = 'https://jobfinder-server-kvct.onrender.com/jobs';
+const API_URL = 'https://jobfinder-serverr.netlify.app/jobs';
 
 const Table = () => {
     const navigate = useNavigate();
